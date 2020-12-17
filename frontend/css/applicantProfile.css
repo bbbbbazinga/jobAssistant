@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    font-family: arial, sans-serif;
+    outline: none;
+}
+
+body {
+    /* background-color: #f5f7f8; */
+    font-size: 15px;
+    color: #312e37;
+}
+
+.postJob {
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.box {
+    margin: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    border-radius: 2%;
+}
+
+/* 放置左边的选择栏 */
+.selection {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+/* 每个按钮的属性 */
+.bar {
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    outline: none;
+    
+}
+
+.bar:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+/* 放置右边的信息栏 */
+.details {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* 当前信息表名称 */
+.subTitle {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 30px;
+    text-decoration: underline;
+}
+
+
+/* flex-box按列存储container */
+.row {
+    width: 90%;
+    height: auto;
+    margin: 20px auto 0;
+}
+
+/* 每个container显示一大块信息 */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* 大块信息名称 */
+h2 {
+    float: left;
+    width: 100%;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.info-container {
+    display: flex;
+    width: 100%;
+}
+
+.each-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.each-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.question {
+    margin: 5px 0;
+    opacity: 0.5;
+}
+
+.answer {
+    font-size: 18px;
+}
+
+/* 个人照片所放位置 */
+.portrait {
+    margin: 0 auto 10px;
+    height: 150px;
+    object-fit: contain;
+}
+
+.bar.back {
+    float: right;
+    width: 10%;
+    height: 30px;
+    font-size: 15px;
+    margin-left: 85%;
+}
+
+.buttons {
+    margin: 50px 0 20px 40px;
+    font-size: 10px;
+    /* padding: 5px 0; */
+}
+
+.accept:hover, .decline:hover, .interview:hover, .additional:hover, 
+.send-interview-time:hover, .send-additional-info:hover, .choose-offer-btn:hover, .send-offer-btn:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+.accept, .decline, .interview, .additional {
+    float: left;
+    display: block;
+    margin-right: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+
+.interview-info, .additional-info {
+    display: none;
+    /* display: flex; */
+    width: 90%;
+    margin: 20px auto;
+}
+
+span {
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+input[type=date], textarea {
+    width: 70%;
+    font-size: 15px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 2px solid #312e37;
+    box-shadow: 1px 1px 2px gray, -1px -1px 2px gray;
+}
+
+.additional-info-content, .interview-info-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.send-interview-time, .send-additional-info {
+    display: block;
+    width: 15%;
+    font-size: 12px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.warning, .send-offer-warning {
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.send-offer-info {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    width: 90%;
+    margin: 20px auto;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.send-offer-info-content {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.send-file-name::before {
+    content: 'File Name: ';
+    font-weight: bold;
+}
+
+.send-file-name {
+    float: left;
+    margin-right: 50px;
+}
+
+.choose-offer-btn, .send-offer-btn {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}

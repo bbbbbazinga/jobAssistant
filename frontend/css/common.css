@@ -1,0 +1,164 @@
+/* 字体声明 */
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?p4ssmb');
+    src: url('../fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?p4ssmb') format('truetype'),
+        url('../fonts/icomoon.woff?p4ssmb') format('woff'),
+        url('../fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+.w {
+    width: 1200px;
+    margin: 0 auto;    
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.style_grey{
+    color: #312e37;
+}
+
+/* tophead */
+.shortcut {
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#webName {
+    padding-left: 10px;
+}
+.shortcut ul li{
+    float: left;
+}
+
+.pullDown {
+    position: fixed;    
+    line-height: 15px;
+    margin-top: 5px;
+    /* border-bottom: 1px solid #666; */
+}
+#JobType {
+    right: 450px;
+}
+
+#CompanyType {
+    right: 210px;
+}
+
+#mySetting, #emSetting{
+    right: 180px;
+}
+
+.pullDown .line {
+    margin: 0 15px;
+}
+
+.arrow-icon .BTN:hover,
+#home:hover {
+    color: rgba(230, 160, 40, 0.934);
+    font-size: 20px;
+}
+
+
+.line{
+    width: 1px;
+    height: 12px;
+    background-color: #312e37;
+    margin: 33px 15px 0;
+}
+
+.arrow-icon p{
+    line-height: 20px;
+    margin-top: 29px;
+}
+.arrow-icon p::after{
+    font-family: 'icomoon';
+    content: '\e900';
+    margin-left: 6px;
+}
+
+#loginToLogout:hover {
+    color: rgba(145, 25, 25, 0.934);
+    font-size: 20px;
+}
+
+.header{
+    position: relative;
+    height: 80px;
+    background-color: #666;
+}
+
+/* search 538*36 */
+.search{
+    position: absolute;
+    left: 250px;
+    top: 20px;
+    width: 706px;
+    height: 45px;
+}
+.search input {
+    float: left;
+    width: 400px;
+    height: 40px;
+    padding-left: 10px;
+    border: 2px solid #312e37;
+}
+
+#jSelect {
+    float: left;
+    width: 200px;
+    height: 40px;
+    padding-left: 10px;
+    margin-left: 2px;
+    border: 2px solid #312e37;
+}
+
+.search button{
+    float: left;
+    width: 100px;
+    height: 40px;
+    background-color: #312e37;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bolder;
+    margin-left: 2px;
+}
+
+.search button:hover{
+    background-color: #fff;
+    font-size: 20px;
+    color: #312e37;
+    font-weight: bolder;
+}
+
+
+.footer{
+    height: 94px;
+    color: #fff;
+    background-color: #312e37;
+}
+
+.mod_copyright{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.links{
+    margin-bottom: 15px;
+}
+.links a{
+    margin: 0 10px;
+}
+.copyright{
+    line-height: 20px;
+}
+

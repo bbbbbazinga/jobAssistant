@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job</title>
+    <meta name="description" content="We Know You Worth Better">
+    <meta name="keywords" content="Job Assistant">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <!-- seekerPage -->
+    <link rel="stylesheet" href="css/postJob.css">
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico" type="image/x-icon">
+    <script type="module" src="js/topAndBottom.js"></script>
+    <script type="module" src="js/api.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@100;300&display=swap');
+    </style>
+</head>
+
+<body>
+    <!-- tophead start-->
+    <section class="shortcut">
+        <div class="w">
+            <div class="fl" id="webName">
+                <img src="./images/logo.jpeg" alt="logo">
+            </div>
+            <div class="fr">
+                <ul>
+                    <li id="home" class="BTN">Home</li>
+                    <li class="line"></li>
+                    <li class="arrow-icon">
+                        <p id="jobs" class="BTN">Jobs</p>
+                        <ul id="JobType" class="pullDown" style="display: none;">
+                            <li id="Full-Time" class="BTN">Full-Time</li>
+                            <li class="line"></li>
+                            <li id="Part-Time" class="BTN">Part-Time</li>
+                            <li class="line"></li>
+                            <li id="Casual" class="BTN">Casual</li>
+                        </ul>
+                    </li>
+                    <li class="line"></li>
+                    <li class="arrow-icon">
+                        <p id="companies" class="BTN">Companies</p>
+                        <ul id="CompanyType" class="pullDown" style="display: none;">
+                            <li id="large-scale" class="BTN">Large-scale Companies</li>
+                            <li class="line"></li>
+                            <li id="medium-scale" class="BTN">Medium-scale Companies</li>
+                            <li class="line"></li>
+                            <li id="small-business" class="BTN">Small Business</li>
+                        </ul>
+                    </li>
+                    <li class="line"></li>
+                    <li id="showMy" class="arrow-icon" style="display: none;">
+                        <p id="userInformation" class="BTN">My Information</p>
+                        <ul id="mySetting" class="pullDown" style="display: none;">
+                            <li id="myProfile" class="BTN">My Profile</li>
+                            <li class="line"></li>
+                            <li id="myApplication" class="BTN">My Application</li>
+                        </ul>
+                    </li>
+                    <li id="showEm" class="arrow-icon" style="display: none;">
+                        <p id="emInformation" class="BTN">My Information</p>
+                        <ul id="emSetting" class="pullDown" style="display: none;">
+                            <li id="emProfile" class="BTN">Business Profile</li>
+                            <li class="line"></li>
+                            <li id="postAJob" class="BTN">Post a Job</li>
+                            <li class="line"></li>
+                            <li id="jobPosted" class="BTN">Job Posted</li>
+                            <!-- <li class="line"></li>
+                            <li id="applicants">Applicants</li> -->
+                        </ul>
+                    </li>
+                    <li id="registerToNone" class="BTN">Join Now</li>
+                    <li class="line"></li>
+                    <li id="loginToLogout" class="BTN">Sign in</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- tophead end-->
+
+    <!-- Header start-->
+    <header class="header w">
+        <!-- Search 538*36 -->
+        <div class="search">
+            <input type="search" name="mainSearch" id="mainSearch" placeholder="Search Your Keyword Here">
+            <select id="jSelect">
+                <option>Job Type</option>
+                <option>Information Technology</option>
+                <option>Healthcare & Medical</option>
+                <option>Accounting</option>
+                <option>Education</option>
+                <option>Banking & Financial Services</option>
+                <option>Engineering</option>
+                <option>Hospitality & Tourism</option>
+                <option>Manufacturing</option>
+                <option>Marketing</option>
+                <option>Other</option>
+            </select>
+            <button id="mainSearchBTN">Search</button>
+        </div>
+    </header>
+    <!-- header end-->
+
+    <!-- main start-->
+    <div class="w">
+        <div class="postJob">
+            <!-- 左边选择框 -->
+            <div class="selection box">
+                <button class="bar" id="profile">Business Profile</button>
+                <button class="bar" id="post">Post a Job</button>
+                <button class="bar" id="posted">Job Posted</button>
+                <button class="bar" id="logout">Log Out</button>
+            </div>
+            <!-- 右边信息框 -->
+            <div class="details box">
+                <!-- 表的大标题 -->
+                <div class="subTitle">Post a Job</div>
+
+                <div class="container">
+                    <form class="postForm" name="postForm" id="postForm">
+
+                        <div class="label-input">
+                            <label class="labelPost" for="cname">Company Name</label>
+                            <input class="infoInput" type="text" name="cname" id="cname"
+                                placeholder="Your Company Name...">
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="compScale">Company Scale</label>
+                            <select class="infoInput" name="compScale" id="compScale">
+                                <option>Large</option>
+                                <option>Medium</option>
+                                <option>Small</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="jobType">Job Type</label>
+                            <select class="infoInput" name="jobType" id="jobType">
+                                <option>Information Technology</option>
+                                <option>Healthcare & Medical</option>
+                                <option>Accounting</option>
+                                <option>Education</option>
+                                <option>Banking & Financial Services</option>
+                                <option>Engineering</option>
+                                <option>Hospitality & Tourism</option>
+                                <option>Manufacturing</option>
+                                <option>Marketing</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="jobTitle">Job Title</label>
+                            <input class="infoInput" type="text" name="jobTitle" id="jobTitle" placeholder="Job Title">
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="workState">Work State</label>
+                            <select class="infoInput" name="workState" id="workState">
+                                <option>ACT</option>
+                                <option>NSW</option>
+                                <option>VIC</option>
+                                <option>QLD</option>
+                                <option>WA</option>
+                                <option>TAS</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="loc">Work Location</label>
+                            <input class="infoInput" type="text" name="loc" id="loc" placeholder="Work Location...">
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost">Remuneration</label>
+                            <span>From $</span>
+                            <input class="infoInput" type="text" name="minSalary" id="minSalary"
+                                placeholder="Min Salary" style="width: 25%;">
+                            <span style="padding-left: 10px;">to $</span>
+                            <input class="infoInput" type="text" name="maxSalary" id="maxSalary"
+                                placeholder="Max Salary" style="width: 25%;">
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="eType">Employment Type</label>
+                            <select class="infoInput" name="eType" id="eType">
+                                <option>Full-Time</option>
+                                <option>Part-Time</option>
+                                <option>Casual</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="skill">Required Skills</label>
+                            <textarea class="infoInput" type="text" name="skill" id="skill" rows="5"
+                                placeholder="Required Skills..."></textarea>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="jobDes">Job Description</label>
+                            <textarea class="infoInput" id="jobDes" name="jobDes" form="postForm" rows="5"
+                                placeholder="Job Description..."></textarea>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="jobResp">Job Responsibilities</label>
+                            <textarea class="infoInput" type="text" name="jobResp" id="jobResp" rows="5"
+                                placeholder="Job Responsibilities..."></textarea>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="exp">Related Experience</label>
+                            <textarea class="infoInput" type="text" name="exp" id="exp" rows="5"
+                                placeholder="Related Experience..."></textarea>
+                        </div>
+
+                        <div class="label-input">
+                            <label class="labelPost" for="ddl">Application Deadline</label>
+                            <input class="infoInput" type="date" name="ddl" id="ddl" placeholder="Application Deadline">
+                        </div>
+
+                        <div class="warning"></div>
+
+                        <button class="bar submit-btn" type="submit" name="submit" id="submit">Submit</button>
+
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- main end-->
+
+
+    <!-- footer strat -->
+    <footer class="footer">
+        <div class="w">
+            <div class="mod_copyright">
+                <div class="links">
+                    <a href="#" id="aboutus">About J.O.B</a> | <a href="#" id="contactus">Contact Us</a> | <a
+                        href="#">Privacy</a> | <a href="#"><span class="arrow-icon">Language:
+                            En</span></a>| <a href="#"><span class="arrow-icon">Country:
+                            Australia</span></a>
+                </div>
+                <div class="copyright">
+                    © J.O.B 2020. All rights reserved.
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- footer end -->
+    <script type="module" src="js/postJob.js"></script>
+</body>
+
+</html>

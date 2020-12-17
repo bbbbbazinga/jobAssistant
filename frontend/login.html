@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Log in</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico" type="image/x-icon">
+    <script type="module" src="js/api.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="logo">
+            <img src="./images/logo.jpeg" alt="logo">
+        </div>
+        <div class="title">Log in to J.O.B</div>
+        <form id="loginForm">
+            <!-- User Name -->
+            <label for="email">Email Address:</label><br>
+            <input type="text" placeholder="Email Address" id="email" name="email" required><br>
+            <div class="warning" id="checkEmail"></div>
+            <!-- Password -->
+            <label for="pwd">Password:</label><br>
+            <input type="password" placeholder="Password" id="pwd" required><br>
+            <div class="warning" id="checkPwd"></div>
+            <!-- Submit -->
+            <button type="submit" value="login" class="btn" name="loginBtn">Log in</button>
+            <div class="warning" id="checkSubmit"></div>
+        </form>
+        <p>Not registered on J.O.B yet?</p>
+        <a class="create" href="seekerRegister.html">Create your Seeker Account</a>
+        <a class="create" href="employerRegister.html">Create your Employer Account</a>
+    </div>
+
+    <script type="module" src="js/login.js"></script>
+</body>
+
+</html>

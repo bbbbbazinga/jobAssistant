@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    /* background-color: #f5f7f8; */
+    font-size: 15px;
+    color: #312e37;
+}
+
+.seeker {
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.box {
+    margin: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    border-radius: 2%;
+}
+
+/* 放置左边的选择栏 */
+.selection {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+}
+
+/* 每个按钮的属性 */
+.bar {
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    outline: none;
+}
+
+.bar:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+/* 放置右边的信息栏 */
+.details {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* flex-box按列存储container */
+.row {
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px;
+}
+
+/* 当前信息表名称 */
+.subTitle {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 30px;
+    text-decoration: underline;
+}
+
+/* 编辑按钮 */
+.bar.edit {
+    float: right;
+    width: 10%;
+    height: 30px;
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+/* 提交更新按钮 */
+.bar.submit {
+    display: none;
+    width: 10%;
+    height: 30px;
+    font-size: 15px;
+    margin: auto;
+}
+
+/* 每个container显示一大块信息 */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Itim', cursive;
+}
+
+/* 大块信息名称 */
+h2 {
+    float: left;
+    width: 100%;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.info-container {
+    display: flex;
+    width: 100%;
+}
+
+.each-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.each-row {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text], select {
+    display: none;
+    border: 1px solid  #312e37;
+    width: 70%;
+    padding: 5px;
+    box-shadow: 1px 1px 2px gray, -1px -1px 2px gray;
+    border-radius: 4px;
+}
+
+textarea {
+    display: none;
+    border: 1px solid black;
+    font-family: arial, sans-serif;
+    width: 100%;
+    height: 100px;    
+    padding: 5px;
+    box-shadow: 1px 1px 2px gray, -1px -1px 2px gray;
+    border-radius: 4px;
+}
+
+input[type=file] {
+    display: none;
+    margin-left: 20%;
+}
+
+.question {
+    margin: 5px 0;
+    opacity: 0.5;
+}
+
+.answer {
+    font-size: 18px;
+}
+
+/* 个人照片所放位置 */
+.portrait {
+    margin: 0 auto 10px;
+    height: 150px;
+    object-fit: contain;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Register for J.O.B</title>
+    <link rel="stylesheet" href="css/employerRegister.css">
+    <link rel="shortcut icon" href="images/bitbug_favicon.ico" type="image/x-icon">
+    <script type="module" src="js/api.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="logo">
+            <img src="./images/logo.jpeg" alt="logo">
+        </div>
+        <div class="title">Start Your Employer Account</div>
+        <form id="registerForm">
+            <!-- Company Email -->
+            <input type="text" placeholder="Company Email Address" id="coEmail" name="coEmail" required>
+            <div class="warning" id="checkCompanyEmail"></div>
+            <!-- First Name -->
+            <input type="text" placeholder="First Name" id="firstName" name="firstName" required>
+            <div class="warning" id="checkFirstName"></div>
+            <!-- Last Name -->
+            <input type="text" placeholder="Last Name" id="lastName" name="lastName" required>
+            <div class="warning" id="checkLastName"></div>
+            <!-- Password -->
+            <input type="password" placeholder="Password" id="pwd" name="pwd" required>
+            <div class="warning" id="checkPwd"></div>
+            <!-- Confirm Password -->
+            <input type="password" placeholder="Confirm Password" id="confirmPwd" name="confirmPwd" required>
+            <div class="warning" id="checkConfirmPwd"></div>
+            <!-- Phone -->
+            <input type="tel" placeholder="Phone Number" id="phoneNo" name="phoneNo" required>
+            <div class="warning" id="checkPhoneNo"></div>
+            <!-- Company -->
+            <input type="text" placeholder="Company Name" id="coName" name="coName" required>
+            <div class="warning" id="checkCompanyName"></div>
+            <!-- ABN -->
+            <input type="text" placeholder="ABN" id="ABN" name="ABN" required>
+            <div class="warning" id="checkABN"></div>
+            <!-- PostCode -->
+            <input type="text" placeholder="Company Post Code" id="postCode" name="postCode" required>
+            <div class="warning" id="checkPostCode"></div>
+            <!-- Code -->
+            <!-- <input type="text" placeholder="Verify Code" id="vCode" style="width: 30%;" name="vCode"> -->
+            <!-- Send Code -->
+            <!-- <input class="btn" type="button" name="sendCode" value="Send Verification Code"
+                style="width: 50%; height: 40px; float: right; font-size: 15px;"></input> -->
+            <!-- Submit -->
+            <button type="submit" value="login" class="btn" name="regBtn">Sign Up</button>
+            <div class="warning" id="checkSubmit"></div>
+        </form>
+        <p>Already have an account? <a class="create" href="login.html">Log in</a></p>
+        <p style="margin-top: 0;">Create a Seeker Account? <a class="create" href="seekerRegister.html">Click here</a>
+        </p>
+    </div>
+
+    <script type="module" src="js/employerRegister.js"></script>
+</body>
+
+</html>

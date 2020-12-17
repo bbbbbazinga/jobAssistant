@@ -1,0 +1,268 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    /* background-color: #f5f7f8; */
+    font-size: 15px;
+    color: #312e37;
+}
+
+.postJob {
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.box {
+    margin: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    border-radius: 2%;
+}
+
+/* 放置左边的选择栏 */
+.selection {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 250px;
+}
+
+/* 每个按钮的属性 */
+.bar {
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    outline: none;
+    
+}
+
+.bar:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+/* 放置右边的信息栏 */
+.details {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* 当前信息表名称 */
+.subTitle {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 30px;
+    text-decoration: underline;
+}
+
+
+.applications-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.each-application {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    border-radius: 15px;
+    padding: 20px 40px;
+        font-family: 'Itim', cursive;
+}
+
+.each-application-title {
+    font-size: 35px;
+    color: #312e37;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.each-application-title:hover {
+    cursor: pointer;
+    color: rgba(230, 160, 40, 0.934);
+}
+
+.each-application-row {
+    display: flex;
+    margin: 5px 0;
+}
+
+.each-application-additional-info {
+    color: #666;
+    margin: 5px 0;
+}
+
+.each-application-my-offer:hover {
+    font-weight: bold;
+    color: rgba(230, 160, 40, 0.934);
+}
+
+.each-application-my-offer {
+    color: #666;
+    margin: 5px 0;
+}
+
+
+.each-application-company-name::before,
+.each-application-job-type::before,
+.each-application-time::before, 
+.each-application-employer-email::before,
+.each-application-status::before,
+.each-application-my-offer::before,
+.each-application-additional-info::before {
+    font: 15px 'icomoon';
+}
+
+
+.each-application-company-name::before {
+    content: '\e901  Company Name: ';
+}
+
+.each-application-job-type::before {
+    content: '\e9ae  Job Type: ';
+}
+
+.each-application-time::before {
+    content: '\e94e  Apply Time: ';
+}
+
+.each-application-employer-email::before {
+    content: '\ea84  Contact Email: ';
+}
+
+.each-application-status::before {
+    content: '\e97f  Status: ';
+}
+
+.each-application-my-offer::before {
+    content: '\e9c7  My Offer: ';
+}
+
+.each-application-additional-info::before {
+    content: '\e905  Additional Information: ';
+}
+
+.each-application-company-name::before, .each-application-job-type::before, .each-application-time::before, 
+.each-application-employer-email::before, .each-application-status::before, 
+.each-application-my-offer::before, .each-application-additional-info::before {
+    color: #312e37;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.each-application-company-name, .each-application-job-type, .each-application-time, 
+.each-application-employer-email, .each-application-status {
+    color: #666;
+    flex: 1;
+}
+
+.each-application-btn {
+    font-size: 10px;
+    padding: 5px 0;
+}
+
+.each-application-add-file:hover, 
+.each-application-decline:hover, 
+.each-application-accept:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+.each-application-add-file, 
+.each-application-decline, 
+.each-application-accept {
+    float: right;
+    display: block;
+    margin-left: 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.each-application-warning {
+    display: none;
+    color: red;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+
+.each-application-send-file {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    margin: 10px 0;
+    border-top: 2px solid #312e37;
+    padding-top: 20px;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.send-file-info-content {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.send-file-name::before {
+    content: 'File Name: ';
+    font-weight: bold;
+}
+
+.send-file-name {
+    float: left;
+    margin-right: 50px;
+}
+
+.choose-file-btn:hover, .send-file-btn:hover {
+    color: white;
+    background-color: rgba(230, 160, 40, 0.934);
+}
+
+.choose-file-btn, .send-file-btn {
+    float: left;
+    display: block;
+    margin-right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px gray;
+}
+
+.send-file-warning {
+    display: none;
+    color: red;
+    font-size: 10px;
+    margin-bottom: 10px;
+}

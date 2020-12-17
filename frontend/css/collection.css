@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    /* background-color: #f5f7f8; */
+    font-size: 15px;
+    color: #312e37;
+}
+
+.postJob {
+    display: flex;
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.box {
+    margin: 20px;
+    background-color: white;
+    box-shadow: 2px 2px 5px gray, -2px -2px 5px gray;
+    border-radius: 2%;
+}
+
+/* 放置左边的选择栏 */
+.selection {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+}
+
+/* 每个按钮的属性 */
+.bar {
+    width: 80%;
+    height: 60px;
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: #312e37;
+    background-color: white;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    outline: none;
+    
+}
+
+.bar:hover {
+    color: white;
+    background-color: #312e37;
+}
+
+/* 放置右边的信息栏 */
+.details {
+    float: right;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: auto;
+    padding: 20px 0;
+    position: relative;
+}
+
+/* 当前信息表名称 */
+.subTitle {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 30px;
+    text-decoration: underline;
+}
+
+
+
+
